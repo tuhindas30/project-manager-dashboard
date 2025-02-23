@@ -3,30 +3,35 @@
     "id": 1,
     "name": "Andrea",
     "role": "UX Junior",
+    "image": "https://picsum.photos/id/64/200/",
     "mood": "30%"
   },
   {
     "id": 2,
     "name": "Alvaro",
     "role": "Backend Developer",
+    "image": "https://picsum.photos/id/65/200/",
     "mood": "100%"
   },
   {
     "id": 3,
     "name": "Juan",
     "role": "UX Senior",
+    "image": "https://picsum.photos/id/66/200/",
     "mood": "80%"
   },
   {
     "id": 4,
     "name": "Jose",
     "role": "Marketing",
+    "image": "https://picsum.photos/id/67/200/",
     "mood": "0%"
   },
   {
     "id": 5,
     "name": "Maria",
     "role": "UX Junior",
+    "image": "https://picsum.photos/id/68/200/",
     "mood": "50%"
   }
 ]

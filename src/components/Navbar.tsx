@@ -52,7 +52,7 @@ const Navbar = () => {
       <Grid2 gap={1} alignItems={"center"} container>
         <NotificationsNoneIcon />
         <Grid2 alignItems={"center"} gap={1} container>
-          <Avatar alt="Mario" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="Mario" src="https://picsum.photos/id/1/200/" />
           <Typography>Mario</Typography>
         </Grid2>
       </Grid2>

@@ -105,7 +105,7 @@ function App() {
                   alignItems={"center"}
                   gap={1}
                   container>
-                  <Avatar alt="Mario" src="/static/images/avatar/1.jpg" />
+                  <Avatar alt="Mario" src={employee.image} />
                   <Grid2 alignItems={"center"}>
                     <Typography>{employee.name}</Typography>
                     <Typography fontSize={"0.8rem"}>{employee.role}</Typography>
