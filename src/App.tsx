@@ -132,6 +132,7 @@ function App() {
               profitability,
               actual_hours,
               total_hours,
+              progress,
             }) => (
               <BudgetCard
                 key={id}
@@ -141,6 +142,7 @@ function App() {
                 profitability={profitability}
                 actualHours={actual_hours}
                 totalHours={total_hours}
+                progress={progress}
               />
             )
           )}

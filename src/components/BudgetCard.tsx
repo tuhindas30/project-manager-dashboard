@@ -13,6 +13,7 @@ interface BudgetCardProps {
   profitability: number;
   actualHours: number;
   totalHours: number;
+  progress: number;
 }
 
 const StyledCard = styled(Grid2)(() => ({
@@ -38,10 +39,12 @@ const BudgetCard = ({
   profitability,
   actualHours,
   totalHours,
+  progress,
 }: BudgetCardProps) => {
   const getProgressColor = () => {
     const diff = totalHours - actualHours;
     if (diff > 0) return "error";
+    if (progress >= 50) return "warning";
     return "success";
   };
 
@@ -62,7 +65,7 @@ const BudgetCard = ({
         className="progress"
         variant="determinate"
         color={getProgressColor()}
-        value={100}
+        value={progress}
       />
       <Grid2 justifyContent={"space-between"} container>
         <Typography className="description">

@@ -7,7 +7,8 @@
     "budget": 70000,
     "profitability": -2500,
     "actual_hours": 1100,
-    "total_hours": 1200
+    "total_hours": 1200,
+    "progress": 100
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "budget": 70000,
     "profitability": 4000,
     "actual_hours": 1100,
-    "total_hours": 1000
+    "total_hours": 1000,
+    "progress": 50
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "budget": 70000,
     "profitability": 8000,
     "actual_hours": 1100,
-    "total_hours": 500
+    "total_hours": 500,
+    "progress": 30
   },
   {
     "id": 4,
@@ -37,6 +40,7 @@
     "budget": 70000,
     "profitability": 5000,
     "actual_hours": 1100,
-    "total_hours": 700
+    "total_hours": 700,
+    "progress": 30
   }
 ]
