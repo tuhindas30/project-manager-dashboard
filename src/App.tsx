@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Avatar, Box, Grid2, styled, Typography } from "@mui/material";
+import { Avatar, Box, Button, Grid2, styled, Typography } from "@mui/material";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
 import ReportProblemOutlinedIcon from "@mui/icons-material/ReportProblemOutlined";
@@ -9,6 +9,8 @@ import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import RevenueChart from "./components/RevenueChart";
 import BudgetChart from "./components/BudgetChart";
 import employeeData from "./data/employees.json";
+import projectData from "./data/projects.json";
+import BudgetCard from "./components/BudgetCard";
 
 const headerCardData = [
   {
@@ -112,6 +114,26 @@ function App() {
               ))}
             </StyledCard>
           </Grid2>
+        </Grid2>
+        <Grid2 gap={2} marginBlock={"1rem"} container>
+          <Typography variant="h5">Budget status</Typography>
+          <Button variant="contained">+Add New Project</Button>
+          <Button variant="outlined">Download Report</Button>
+          <Button variant="outlined">dd/mm/yyyy - dd/mm/yyyy</Button>
+          <Button variant="outlined">Filter</Button>
+        </Grid2>
+        <Grid2 justifyContent={"space-between"} container>
+          {projectData.map(
+            ({ id, name, description, budget, profitability }) => (
+              <BudgetCard
+                key={id}
+                name={name}
+                description={description}
+                budget={budget}
+                profitability={profitability}
+              />
+            )
+          )}
         </Grid2>
       </Box>
     </>
