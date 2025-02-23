@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Box, Grid2, styled, Typography } from "@mui/material";
+import { Avatar, Box, Grid2, styled, Typography } from "@mui/material";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
 import ReportProblemOutlinedIcon from "@mui/icons-material/ReportProblemOutlined";
@@ -8,6 +8,7 @@ import AutorenewOutlinedIcon from "@mui/icons-material/AutorenewOutlined";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import RevenueChart from "./components/RevenueChart";
 import BudgetChart from "./components/BudgetChart";
+import employeeData from "./data/employees.json";
 
 const headerCardData = [
   {
@@ -58,6 +59,9 @@ const StyledCard = styled(Grid2)(() => ({
     fontWeight: "bold",
     color: "rgba(0,0,0,0.5)",
   },
+  "& .employeeItem": {
+    paddingBlock: "1rem",
+  },
 }));
 
 function App() {
@@ -65,9 +69,12 @@ function App() {
     <>
       <Navbar />
       <Box style={{ padding: "2rem" }}>
-        <Grid2 size={9} container>
-          <Grid2>
-            <Grid2 gap={2} marginBottom={"2rem"} container>
+        <Grid2 size={12} justifyContent={"space-between"} container>
+          <Grid2 size={9}>
+            <Grid2
+              justifyContent={"space-between"}
+              marginBottom={"2rem"}
+              container>
               {headerCardData.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -86,7 +93,25 @@ function App() {
               <BudgetChart />
             </Grid2>
           </Grid2>
-          <Grid2></Grid2>
+          <Grid2 size={2}>
+            <StyledCard>
+              <Typography>Team mood</Typography>
+              {employeeData.map((employee) => (
+                <Grid2
+                  key={employee.id}
+                  className="employeeItem"
+                  alignItems={"center"}
+                  gap={1}
+                  container>
+                  <Avatar alt="Mario" src="/static/images/avatar/1.jpg" />
+                  <Grid2 alignItems={"center"}>
+                    <Typography>{employee.name}</Typography>
+                    <Typography fontSize={"0.8rem"}>{employee.role}</Typography>
+                  </Grid2>
+                </Grid2>
+              ))}
+            </StyledCard>
+          </Grid2>
         </Grid2>
       </Box>
     </>
