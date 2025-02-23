@@ -27,7 +27,7 @@
     "budget": 70000,
     "profitability": 8000,
     "actual_hours": 1100,
-    "total_hours": 2000
+    "total_hours": 500
   },
   {
     "id": 4,
@@ -37,6 +37,6 @@
     "budget": 70000,
     "profitability": 5000,
     "actual_hours": 1100,
-    "total_hours": 1200
+    "total_hours": 700
   }
 ]

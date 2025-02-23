@@ -124,13 +124,23 @@ function App() {
         </Grid2>
         <Grid2 justifyContent={"space-between"} container>
           {projectData.map(
-            ({ id, name, description, budget, profitability }) => (
+            ({
+              id,
+              name,
+              description,
+              budget,
+              profitability,
+              actual_hours,
+              total_hours,
+            }) => (
               <BudgetCard
                 key={id}
                 name={name}
                 description={description}
                 budget={budget}
                 profitability={profitability}
+                actualHours={actual_hours}
+                totalHours={total_hours}
               />
             )
           )}
