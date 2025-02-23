@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Andrea",
+    "role": "UX Junior",
+    "mood": "30%"
+  },
+  {
+    "id": 2,
+    "name": "Alvaro",
+    "role": "Backend Developer",
+    "mood": "100%"
+  },
+  {
+    "id": 3,
+    "name": "Juan",
+    "role": "UX Senior",
+    "mood": "80%"
+  },
+  {
+    "id": 4,
+    "name": "Jose",
+    "role": "Marketing",
+    "mood": "0%"
+  },
+  {
+    "id": 5,
+    "name": "Maria",
+    "role": "UX Junior",
+    "mood": "50%"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "week": [
+    {
+      "id": 1,
+      "cost": 0,
+      "date": "19 June"
+    },
+    {
+      "id": 2,
+      "cost": 1000,
+      "date": "20 June"
+    },
+    {
+      "id": 3,
+      "cost": 3500,
+      "date": "21 June"
+    },
+    {
+      "id": 4,
+      "cost": 3200,
+      "date": "22 June"
+    },
+    {
+      "id": 5,
+      "cost": 4100,
+      "date": "23 June"
+    },
+    {
+      "id": 6,
+      "cost": 5800,
+      "date": "14 June"
+    },
+    {
+      "id": 7,
+      "cost": 6500,
+      "date": "25 June"
+    }
+  ]
+}
