@@ -11,6 +11,10 @@ import BudgetChart from "./components/BudgetChart";
 import employeeData from "./data/employees.json";
 import projectData from "./data/projects.json";
 import BudgetCard from "./components/BudgetCard";
+import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 const headerCardData = [
   {
@@ -117,10 +121,22 @@ function App() {
         </Grid2>
         <Grid2 gap={2} marginBlock={"1rem"} container>
           <Typography variant="h5">Budget status</Typography>
-          <Button variant="contained">+Add New Project</Button>
-          <Button variant="outlined">Download Report</Button>
-          <Button variant="outlined">dd/mm/yyyy - dd/mm/yyyy</Button>
-          <Button variant="outlined">Filter</Button>
+          <Button variant="contained">
+            <AddOutlinedIcon style={{ marginRight: "0.5rem" }} /> Add New
+            Project
+          </Button>
+          <Button variant="outlined">
+            <FileDownloadOutlinedIcon style={{ marginRight: "0.5rem" }} />{" "}
+            Download Report
+          </Button>
+          <Button variant="outlined">
+            <CalendarTodayOutlinedIcon style={{ marginRight: "0.5rem" }} />
+            dd/mm/yyyy - dd/mm/yyyy
+          </Button>
+          <Button variant="outlined">
+            <TuneOutlinedIcon style={{ marginRight: "0.5rem" }} />
+            Filter
+          </Button>
         </Grid2>
         <Grid2 justifyContent={"space-between"} container>
           {projectData.map(

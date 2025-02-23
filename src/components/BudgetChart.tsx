@@ -1,4 +1,11 @@
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  PieLabelRenderProps,
+  Legend,
+} from "recharts";
 import data from "../data/budget.json";
 import { Grid2, styled, Typography } from "@mui/material";
 
@@ -10,10 +17,44 @@ const StyledCard = styled(Grid2)(() => ({
   "& .cardTitle": {
     marginBottom: "1rem",
   },
+  "& .pie": {
+    "& .recharts-pie-label-line": {
+      display: "none",
+    },
+  },
 }));
 
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+}: PieLabelRenderProps) => {
+  const RADIAN = Math.PI / 180;
+  if (!innerRadius || !outerRadius) return "";
+  const radius =
+    (innerRadius as number) +
+    ((outerRadius as number) - (innerRadius as number)) * 0.2;
+  const x = (cx as number) + radius * Math.cos(-midAngle * RADIAN);
+  const y = (cy as number) + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      fontSize={"0.5rem"}
+      textAnchor={x > (cx as number) ? "start" : "end"}
+      dominantBaseline="central">
+      {`${(percent! * 100).toFixed(0)}%`}
+    </text>
+  );
+};
+
 const BudgetChart = () => {
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+  const COLORS = ["#e40000", "#788cd1", "#00dbc2"];
   return (
     <StyledCard size={6}>
       <Typography className="cardTitle">Budget</Typography>
@@ -23,9 +64,9 @@ const BudgetChart = () => {
             data={data}
             innerRadius={60}
             outerRadius={80}
-            fill="#8884d8"
-            paddingAngle={5}
-            dataKey="value">
+            dataKey="value"
+            className="pie"
+            label={renderCustomizedLabel}>
             {data.map((_, index) => (
               <Cell
                 key={`cell-${index}`}
@@ -33,6 +74,7 @@ const BudgetChart = () => {
               />
             ))}
           </Pie>
+          <Legend />
         </PieChart>
       </ResponsiveContainer>
     </StyledCard>
